@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 01 - JAVASCRIP</title>
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <meta name="description" content="Conteúdo das aulas de JS">
+    <meta name="keywords" content="sites, web, frontend">
+    <meta name="author" content="Lívia Santos, liviadosenai@gmail.com">
+</head>
+
+<body>
+    <h1> Interagindo os recursos de interatividade do JS</h1>
+    <hr>
+    <script> 
+        window.confirm("Seja Bem-Vindo ao site")
+        let nome = window.prompt("QUAL É  SEU NOME?");
+        window.alert(nome);
+        console.log(nome);
+        let recursos = window.confirm("Você deseja sai a página?");
+        console.log(resposta);
+        document.writ("SEJA BEM-VINDO" + nome);
+
+
+        if(resposta==true){
+            setTimeout(() => {
+                window.open("index.html");
+            }, 3000); // 3000 miliseundos = 3 segundos
+
+        }else{
+            window.confirm(nome + ", voê vai continuar nessa página!");
+        }
+    </script>
+
+</body>
+
+</html>
