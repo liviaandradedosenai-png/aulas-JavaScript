@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DESAFIO 04 - JAVASCRIP</title>
+    <title>DESAFIO 04 - JAVASCRIPT</title>
     <link rel="icon" type="image/png" href="favicon.png"> 
     <meta name="description" content="Conteúdo das aulas de JS">
     <meta name="keywords" content="sites, web, frontend">
@@ -16,7 +16,7 @@
     <hr>
 
     <div>
-        <img width="100%" src="img/coraline1.jpg" alt="Imagem coraline" >
+        <img width="100%" src="img/coraline1.jpg" alt="Imagem coraline" title="coraline1">
         
        <button onclick="trocarImagem()">Trocar imagem</button>
       
@@ -24,18 +24,17 @@
 
     <script> 
         function trocarImagem(){
-            console.log("ASHDKAhd");
             const tags_img = document.getElementsByTagName('img');
             console.log("IMGS", tags_img);
             let tags_img_2 = tags_img[0];
-            tags_img_2.src ="img/coraline2.webp"
-        }
-        //   function trocarImagem(){
-        //     const tags_img = document.getElementsByTagName('img');
-        //     console.log(tags_img);
-        //     let tags_img_3 = tags_img[1];
-        //     tags_img_3.src ="img/coraline2.webp"
-        // }
+            if(tags_img_2.title=="coraline1"){
+                tags_img_2.src ="img/coraline2.webp"
+                tags_img_2.title="coraline2"
+            }else{
+                tags_img_2.src ="img/coraline1.jpg"
+                tags_img_2.title="coraline1"                
+            }
+            }
 
 
 
@@ -44,3 +43,5 @@
 
    
     </script>
+    </body>
+</html>
