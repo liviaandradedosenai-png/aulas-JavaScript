@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO 04 - JAVASCRIPT</title>
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <meta name="description" content="Conteúdo das aulas de JS">
+    <meta name="keywords" content="sites, web, frontend">
+    <meta name="author" content="Lívia Santos, liviadosenai@gmail.com">
+</head>
+
+<body >
+    <h1> <mark>MANIPULANDO IMAGENS</mark> MO HTML ATRAVÉZ DO JS: ALERT</h1>
+    <hr>
+
+    <div>
+        <img width="100%" src="img/coraline1.jpg" alt="Imagem coraline" title="coraline1">
+        
+       <button onclick="trocarImagem_1()"> Coraline 1</button>
+       <button onclick="trocarImagem_2()">Coraline 2</button>
+      
+    </div>
+
+    <script> 
+        function trocarImagem_1(){
+            const tags_img = document.getElementsByTagName('img');
+            console.log("IMGS", tags_img);
+            let tags_img_2 = tags_img[0];
+
+                tags_img_2.src ="img/coraline1.jpg"
+                tags_img_2.title="coraline1"                
+          
+            }
+
+        function trocarImagem_2(){
+            const tags_img = document.getElementsByTagName('img');
+            console.log("IMGS", tags_img);
+            let tags_img_2 = tags_img[0];
+    
+                tags_img_2.src ="img/coraline2.webp"
+                tags_img_2.title="coraline2"
+  
+            }
+
+
+
+        
+
+   
+    </script>
+    </body>
+</html>
