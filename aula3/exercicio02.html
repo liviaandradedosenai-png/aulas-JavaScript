@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 02 - JAVASCRIP</title>
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <meta name="description" content="Conteúdo das aulas de JS">
+    <meta name="keywords" content="sites, web, frontend">
+    <meta name="author" content="Lívia Santos, liviadosenai@gmail.com">
+</head>
+
+<body>
+    <h1>iNTERAÇAO JS COM FORMS DO HTML</h1>
+    <hr>
+
+    <form action="#" >
+
+        <input type ="number" id="num1" required>
+        <input type ="number" id="num2" required>
+
+    <button onclick="somar1()"> Somar </button>
+    <button onclick="subtracao2()"> Subtrair</button>
+    <button onclick="divisao3()"> Dividir</button>
+    <button onclick="multiplicacao4()"> Multiplicar</button>
+
+    <h2 id="resultado"></h2>
+    
+
+    </form>
+    <script> 
+
+        function somar1(){
+            let num1 = document.getElementById('num1');
+            let num2 = document.getElementById('num2');
+            console.log(num1.value)
+            console.log(num2)
+
+            let resultado  = parseFloat(num1.value) + parseFloat(num2.value)
+            console.log(resultado)
+            document.getElementById("resultado").innerText  = "O resultado é: " + resultado;
+
+        }
+
+        function subtracao2(){
+        let num1 = document.getElementById('num1');
+        let num2 = document.getElementById('num2');
+        console.log(num1.value)
+        console.log(num2)
+
+        let resultado  = parseFloat(num1.value) - parseFloat(num2.value)
+        console.log(resultado)
+        document.getElementById("resultado").innerText  = "O resultado é: " + resultado;
+  
+        }
+
+        function divisao3(){
+        let num1 = document.getElementById('num1');
+        let num2 = document.getElementById('num2');
+        console.log(num1.value)
+        console.log(num2)
+        let resultado  = 0
+
+        if(parseInt(num2.value)!=0){
+            resultado  = parseFloat(num1.value) / parseFloat(num2.value)
+        }else{
+            resultado ="Não é possível divisão por Zero!"
+        }
+        
+        console.log(resultado)
+        document.getElementById("resultado").innerText  = "O resultado é: " + resultado;
+  
+        }
+
+        function multiplicacao4(){
+        let num1 = document.getElementById('num1');
+        let num2 = document.getElementById('num2');
+        console.log(num1.value)
+        console.log(num2)
+
+        let resultado  = parseFloat(num1.value) * parseFloat(num2.value)
+        console.log(resultado)
+        document.getElementById("resultado").innerText  = "O resultado é: " + resultado;
+  
+        }
+            
+    </script>
+    
+
+</body>
+
+</html>

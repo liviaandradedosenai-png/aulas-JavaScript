@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO 01 - JAVASCRIPT</title>
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <meta name="description" content="Conteúdo das aulas de JS">
+    <meta name="keywords" content="sites, web, frontend">
+    <meta name="author" content="Lívia Santos, liviadosenai@gmail.com">
+</head>
+
+<body >
+    <h1> <mark>MANIPULANDO IMAGENS COM ID </mark> MO HTML ATRAVÉZ DO JS: ALERT</h1>
+    <hr>
+
+    <h2 id ="Horario"></h2>
+
+    <div>
+        <img width="100%" src="img/bomdia.jpg" id="saudacao" alt="Imagem sol" title="Bom dia!">
+
+       <button onclick="trocarImagem_1()"> BOM DIA</button>
+       <button onclick="trocarImagem_2()"> BOA TARDE</button>
+       <button onclick="trocarImagem_3()"> BOA NOITE</button>
+       <button onclick="trocarImagem_4()"> BOA MADRUGADA</button>
+      
+    </div>
+
+    <script> 
+        const tags_img = document.getElementById('saudacao');
+        function trocarImagem_1(){
+                tags_img.src ="img/bomdia.jpg"
+                tags_img.title="Bom dia!"   
+            }
+
+        function trocarImagem_2(){
+                tags_img.src ="img/boatarde.jpg"
+                tags_img.title="Boa Tarde!"   
+  
+            }
+
+            function trocarImagem_3(){
+             const tags_img = document.getElementById('saudacao');
+                tags_img.src ="img/boanoite.jpg"
+                tags_img.title="Boa Noite!"                
+          
+            }
+
+        function trocarImagem_4(){
+             const tags_img = document.getElementById('saudacao');
+                tags_img.src ="img/boamadrugada.jpg"
+                tags_img.title="BOa Madrugada!"
+  
+            }
+
+            const agora = new Date();
+
+            const horas = agora.getHours();       // 0 a 23
+            const minutos = agora.getMinutes();   // 0 a 59
+            const segundos = agora.getSeconds(); // 0 a 59
+
+            console.log(`${horas}:${minutos}:${segundos}`);
+
+
+    </script>
+
+    </body>
+</html>
